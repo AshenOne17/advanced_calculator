@@ -1,0 +1,17 @@
+﻿  CalculationTypes.cpp
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculationTypes.cpp(143,38): warning C4244: 'argument': conversion from 'long double' to 'TYPE', possible loss of data
+          with
+          [
+              TYPE=float
+          ]
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculationTypes.cpp(151,16): warning C4244: 'argument': conversion from 'long double' to 'TYPE', possible loss of data
+          with
+          [
+              TYPE=float
+          ]
+  Generating code
+  5 of 62 functions ( 8.1%) were compiled, the rest were copied from previous compilation.
+    3 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  advanced_calculator.vcxproj -> D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\x64\Release\advanced_calculator.exe

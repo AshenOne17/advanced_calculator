@@ -1,2 +1,12 @@
 ﻿  CalculationTypes.cpp
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculationTypes.cpp(137,38): warning C4244: 'argument': conversion from 'long double' to 'TYPE', possible loss of data
+          with
+          [
+              TYPE=float
+          ]
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculationTypes.cpp(141,16): warning C4244: 'argument': conversion from 'long double' to 'TYPE', possible loss of data
+          with
+          [
+              TYPE=float
+          ]
   advanced_calculator.vcxproj -> D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\x64\Debug\advanced_calculator.exe
