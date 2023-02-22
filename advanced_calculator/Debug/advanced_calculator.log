@@ -1,14 +1,13 @@
 ﻿  CalculationTypes.cpp
-D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculationTypes.cpp(143,38): warning C4244: 'argument': conversion from 'long double' to 'TYPE', possible loss of data
-          with
-          [
-              TYPE=float
-          ]
-D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculationTypes.cpp(151,16): warning C4244: 'argument': conversion from 'long double' to 'TYPE', possible loss of data
-          with
-          [
-              TYPE=float
-          ]
-  main.cpp
-  Generating Code...
-  advanced_calculator.vcxproj -> D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\Debug\advanced_calculator.exe
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculatorModes.h(184,24): error C3861: 'm_radValue': identifier not found
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculatorModes.h(184,24): error C2065: 'm_radValue': undeclared identifier
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculatorModes.h(190,24): error C3861: 'm_radValue': identifier not found
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculatorModes.h(190,24): error C2065: 'm_radValue': undeclared identifier
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculatorModes.h(196,24): error C3861: 'm_radValue': identifier not found
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculatorModes.h(196,24): error C2065: 'm_radValue': undeclared identifier
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculatorModes.h(202,25): error C3861: 'm_radValue': identifier not found
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculatorModes.h(202,25): error C2065: 'm_radValue': undeclared identifier
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculatorModes.h(208,25): error C3861: 'm_radValue': identifier not found
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculatorModes.h(208,25): error C2065: 'm_radValue': undeclared identifier
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculatorModes.h(214,25): error C3861: 'm_radValue': identifier not found
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculatorModes.h(214,25): error C2065: 'm_radValue': undeclared identifier
