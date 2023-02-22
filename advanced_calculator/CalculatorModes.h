@@ -1,214 +1,218 @@
+#ifndef CALCULATOR_MODES_H
+#define CALCULATOR_MODES_H
+
 #pragma once
 
-#include "CalculationTypes.h"
 #include <cmath>
 
 // Parent 'Calculator' class declaration
 // -------------------------
-template <typename TYPE>
-class Calculator
+template <typename Type>
+class calculator
 {
 protected:
-	TYPE m_lValue = 0;
-	TYPE m_rValue = 0;
+	Type m_l_value_ = 0;
+	Type m_r_value_ = 0;
 public:
-	Calculator() {}
+	calculator() = default;
 
-	void setLValue(TYPE lValue);
-	void setRValue(TYPE rValue);
+	void set_l_value(Type l_value);
+	void set_r_value(Type r_value);
 };
 // -----------------------------
 
 
 // Parent 'Calculator' class functions definitions
 // ---------------------
-template <typename TYPE>
-void Calculator<TYPE>::setLValue(TYPE lValue)
+template <typename Type>
+void calculator<Type>::set_l_value(Type l_value)
 {
-	m_lValue = lValue;
+	m_l_value_ = l_value;
 }
 
-template <typename TYPE>
-void  Calculator<TYPE>::setRValue(TYPE rValue)
+template <typename Type>
+void  calculator<Type>::set_r_value(Type r_value)
 {
-	m_rValue = rValue;
+	m_r_value_ = r_value;
 }
 // -------------------------------------------
 
 
 // Child 'ArithmeticCalc' class declaration
 // ---------------------
-template <typename TYPE>
-class ArithmeticCalc : public Calculator<TYPE>
+template <typename Type>
+class arithmetic_calc : public calculator<Type>
 {
 public:
-	ArithmeticCalc() {}
+	arithmetic_calc() = default;
 
-	TYPE addition();
+	Type addition();
 
-	TYPE substraction();
+	Type substraction();
 
-	TYPE multiplication();
+	Type multiplication();
 
-	TYPE division();
+	Type division();
 };
 // ----------------------
 
 
 // Child 'ArithmeticCalc' class functions definitions
 // ---------------------
-template <typename TYPE>
-TYPE ArithmeticCalc<TYPE>::addition()
+template <typename Type>
+Type arithmetic_calc<Type>::addition()
 {
 	return this->m_lValue + this->m_rValue;
 }
 
-template <typename TYPE>
-TYPE ArithmeticCalc<TYPE>::substraction()
+template <typename Type>
+Type arithmetic_calc<Type>::substraction()
 {
 	return this->m_lValue - this->m_rValue;
 }
 
-template <typename TYPE>
-TYPE ArithmeticCalc<TYPE>::multiplication()
+template <typename Type>
+Type arithmetic_calc<Type>::multiplication()
 {
-	return (TYPE)(this->m_lValue * this->m_rValue);
+	return static_cast<Type>(this->m_lValue * this->m_rValue);
 }
 
-template <typename TYPE>
-TYPE ArithmeticCalc<TYPE>::division()
+template <typename Type>
+Type arithmetic_calc<Type>::division()
 {
-	return (TYPE)(this->m_lValue / this->m_rValue);
+	return static_cast<Type>(this->m_lValue / this->m_rValue);
 }
 // ----------------------------------
 
 
 // Child 'TrigonometryCalc' class declaration
-template <typename TYPE>
-class TrigonometryCalc : public Calculator<TYPE>
+template <typename Type>
+class trigonometry_calc : public calculator<Type>
 {
 protected:
-	TYPE m_radValue = 0;
+	Type m_rad_value_ = 0;
 public:
-	TrigonometryCalc() {}
+	trigonometry_calc() = default;
 
-	void setRad(TYPE degValue);
-	TYPE getRad();
+	void set_rad(Type deg_value);
+	Type get_rad();
 
-	TYPE sinCalc();
-	TYPE cosCalc();
-	TYPE tanCalc();
-	TYPE arcsinCalc();
-	TYPE arccosCalc();
-	TYPE arctanCalc();
+	Type sin_calc();
+	Type cos_calc();
+	Type tan_calc();
+	Type arcsin_calc();
+	Type arccos_calc();
+	Type arctan_calc();
 };
 // ----------------
 
 
 // Child 'TrigonometryCalc' class functions definition
-template <typename TYPE>
-void TrigonometryCalc<TYPE>::setRad(TYPE degValue)
+template <typename Type>
+void trigonometry_calc<Type>::set_rad(Type deg_value)
 {
-	m_radValue = degValue;
+	m_rad_value_ = deg_value;
 }
 
-template <typename TYPE>
-TYPE TrigonometryCalc<TYPE>::getRad() 
+template <typename Type>
+Type trigonometry_calc<Type>::get_rad()
 {
-	return m_radValue;
+	return m_rad_value_;
 }
 
-template <typename TYPE>
-TYPE TrigonometryCalc<TYPE>::sinCalc()
+template <typename Type>
+Type trigonometry_calc<Type>::sin_calc()
 {
-	return TYPE(std::sin(m_radValue));
+	return TYPE(std::sin(m_rad_value_));
 }
 
-template <typename TYPE>
-TYPE TrigonometryCalc<TYPE>::cosCalc()
+template <typename Type>
+Type trigonometry_calc<Type>::cos_calc()
 {
-	return TYPE(std::cos(m_radValue));
+	return TYPE(std::cos(m_rad_value_));
 }
 
-template <typename TYPE>
-TYPE TrigonometryCalc<TYPE>::tanCalc()
+template <typename Type>
+Type trigonometry_calc<Type>::tan_calc()
 {
-	return TYPE(std::tan(m_radValue));
+	return TYPE(std::tan(m_rad_value_));
 }
 
-template <typename TYPE>
-TYPE TrigonometryCalc<TYPE>::arcsinCalc()
+template <typename Type>
+Type trigonometry_calc<Type>::arcsin_calc()
 {
-	return TYPE(std::asin(m_radValue));
+	return TYPE(std::asin(m_rad_value_));
 }
 
-template <typename TYPE>
-TYPE TrigonometryCalc<TYPE>::arccosCalc()
+template <typename Type>
+Type trigonometry_calc<Type>::arccos_calc()
 {
-	return TYPE(std::acos(m_radValue));
+	return TYPE(std::acos(m_rad_value_));
 }
 
-template <typename TYPE>
-TYPE TrigonometryCalc<TYPE>::arctanCalc()
+template <typename Type>
+Type trigonometry_calc<Type>::arctan_calc()
 {
-	return TYPE(std::atan(m_radValue));
+	return TYPE(std::atan(m_rad_value_));
 }
 // -----------------------------------
 
 
 // Child 'TrigonometryHyperbolicCalc' class declaration
-template <typename TYPE>
-class TrigonometryHyperbolicCalc : public TrigonometryCalc<TYPE>
+template <typename Type>
+class trigonometry_hyperbolic_calc : public trigonometry_calc<Type>
 {
 public:
-	using TrigonometryCalc<TYPE>::m_radValue;
+	using trigonometry_calc<Type>::m_rad_value_;
 
-	TrigonometryHyperbolicCalc() {}
+	trigonometry_hyperbolic_calc() = default;
 
-	TYPE sinhCalc();
-	TYPE coshCalc();
-	TYPE tanhCalc();
-	TYPE arcsinhCalc();
-	TYPE arccoshCalc();
-	TYPE arctanhCalc();
+	Type sinh_calc();
+	Type cosh_calc();
+	Type tanh_calc();
+	Type arcsinh_calc();
+	Type arccosh_calc();
+	Type arctanh_calc();
 };
 // ----------------
 
 
 // Child 'TrigonometryHyperbolicCalc' class functions definition
-template<typename TYPE>
-TYPE TrigonometryHyperbolicCalc<TYPE>::sinhCalc()
+template<typename Type>
+Type trigonometry_hyperbolic_calc<Type>::sinh_calc()
 {
-	return TYPE(std::sinh(m_radValue));
+	return Type(std::sinh(m_rad_value_));
 }
 
-template<typename TYPE>
-TYPE TrigonometryHyperbolicCalc<TYPE>::coshCalc()
+template<typename Type>
+Type trigonometry_hyperbolic_calc<Type>::cosh_calc()
 {
-	return TYPE(std::cosh(m_radValue));
+	return Type(std::cosh(m_rad_value_));
 }
 
-template<typename TYPE>
-TYPE TrigonometryHyperbolicCalc<TYPE>::tanhCalc()
+template<typename Type>
+Type trigonometry_hyperbolic_calc<Type>::tanh_calc()
 {
-	return TYPE(std::tanh(m_radValue));
+	return Type(std::tanh(m_rad_value_));
 }
 
-template<typename TYPE>
-TYPE TrigonometryHyperbolicCalc<TYPE>::arcsinhCalc()
+template<typename Type>
+Type trigonometry_hyperbolic_calc<Type>::arcsinh_calc()
 {
-	return TYPE(std::asinh(m_radValue));
+	return Type(std::asinh(m_rad_value_));
 }
 
-template<typename TYPE>
-TYPE TrigonometryHyperbolicCalc<TYPE>::arccoshCalc()
+template<typename Type>
+Type trigonometry_hyperbolic_calc<Type>::arccosh_calc()
 {
-	return TYPE(std::acosh(m_radValue));
+	return Type(std::acosh(m_rad_value_));
 }
 
-template<typename TYPE>
-TYPE TrigonometryHyperbolicCalc<TYPE>::arctanhCalc()
+template<typename Type>
+Type trigonometry_hyperbolic_calc<Type>::arctanh_calc()
 {
-	return TYPE(std::atanh(m_radValue));
+	return Type(std::atanh(m_rad_value_));
 }
 // --------------------------------
+
+#endif //CALCULATOR_MODES_H

@@ -1,15 +1,10 @@
-#include "CalculatorModes.h"
 #include "CalculationTypes.h"
 #include <iostream>
-#include <string>
-#include <cmath>
-#include <stdlib.h>
+#include <cstdlib>
 
-using std::cout; using std::cin;
-
-int main(void) 
+int main()
 {
-	char continue_decision = 'Y';
+	constexpr char continue_decision = 'Y';
 	int choice = 0;
 
 	while (continue_decision == 'Y') 
