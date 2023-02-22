@@ -87,32 +87,32 @@ void trig_output(const int function_choice, const long double angle, trigonometr
 	{
 	case 1:
 	{
-		std::cout << "Sin(" << angle << ") = " << calc.sinCalc() << "\n\n";
+		std::cout << "Sin(" << angle << ") = " << calc.sin_calc() << "\n\n";
 		break;
 	}
 	case 2:
 	{
-		std::cout << "Cos(" << angle << ") = " << calc.cosCalc() << "\n\n";
+		std::cout << "Cos(" << angle << ") = " << calc.cos_calc() << "\n\n";
 		break;
 	}
 	case 3:
 	{
-		std::cout << "Tan(" << angle << ") = " << calc.tanCalc() << "\n\n";
+		std::cout << "Tan(" << angle << ") = " << calc.tan_calc() << "\n\n";
 		break;
 	}
 	case 4:
 	{
-		std::cout << "Arcsin(" << angle << ") = " << calc.arcsinCalc() << "\n\n";
+		std::cout << "Arcsin(" << angle << ") = " << calc.arcsin_calc() << "\n\n";
 		break;
 	}
 	case 5:
 	{
-		std::cout << "Arccos(" << angle << ") = " << calc.arccosCalc() << "\n\n";
+		std::cout << "Arccos(" << angle << ") = " << calc.arccos_calc() << "\n\n";
 		break;
 	}
 	case 6:
 	{
-		std::cout << "Arctan(" << angle << ") = " << calc.arctanCalc() << "\n\n";
+		std::cout << "Arctan(" << angle << ") = " << calc.arctan_calc() << "\n\n";
 		break;
 	}
 	default: std::cout << "Input invalidation!\n\n";
@@ -126,32 +126,32 @@ void hyperbolic_output(const int function_choice, const long double angle, trigo
 	{
 	case 1:
 	{
-		std::cout << "Sinh(" << angle << ") = " << calc.sinhCalc() << "\n\n";
+		std::cout << "Sinh(" << angle << ") = " << calc.sinh_calc() << "\n\n";
 		break;
 	}
 	case 2:
 	{
-		std::cout << "Cosh(" << angle << ") = " << calc.coshCalc() << "\n\n";
+		std::cout << "Cosh(" << angle << ") = " << calc.cosh_calc() << "\n\n";
 		break;
 	}
 	case 3:
 	{
-		std::cout << "Tanh(" << angle << ") = " << calc.tanhCalc() << "\n\n";
+		std::cout << "Tanh(" << angle << ") = " << calc.tanh_calc() << "\n\n";
 		break;
 	}
 	case 4:
 	{
-		std::cout << "Arcsinh(" << angle << ") = " << calc.arcsinhCalc() << "\n\n";
+		std::cout << "Arcsinh(" << angle << ") = " << calc.arcsinh_calc() << "\n\n";
 		break;
 	}
 	case 5:
 	{
-		std::cout << "Arccosh(" << angle << ") = " << calc.arccoshCalc() << "\n\n";
+		std::cout << "Arccosh(" << angle << ") = " << calc.arccosh_calc() << "\n\n";
 		break;
 	}
 	case 6:
 	{
-		std::cout << "Arctanh(" << angle << ") = " << calc.arctanhCalc() << "\n\n";
+		std::cout << "Arctanh(" << angle << ") = " << calc.arctanh_calc() << "\n\n";
 		break;
 	}
 	default: std::cout << "Input invalidation!\n\n";

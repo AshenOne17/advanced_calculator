@@ -62,25 +62,25 @@ public:
 template <typename Type>
 Type arithmetic_calc<Type>::addition()
 {
-	return this->m_lValue + this->m_rValue;
+	return this->m_l_value_ + this->m_r_value_;
 }
 
 template <typename Type>
 Type arithmetic_calc<Type>::substraction()
 {
-	return this->m_lValue - this->m_rValue;
+	return this->m_l_value_ - this->m_r_value_;
 }
 
 template <typename Type>
 Type arithmetic_calc<Type>::multiplication()
 {
-	return static_cast<Type>(this->m_lValue * this->m_rValue);
+	return static_cast<Type>(this->m_l_value_ * this->m_r_value_);
 }
 
 template <typename Type>
 Type arithmetic_calc<Type>::division()
 {
-	return static_cast<Type>(this->m_lValue / this->m_rValue);
+	return static_cast<Type>(this->m_l_value_ / this->m_r_value_);
 }
 // ----------------------------------
 
@@ -123,37 +123,37 @@ Type trigonometry_calc<Type>::get_rad()
 template <typename Type>
 Type trigonometry_calc<Type>::sin_calc()
 {
-	return TYPE(std::sin(m_rad_value_));
+	return Type(std::sin(m_rad_value_));
 }
 
 template <typename Type>
 Type trigonometry_calc<Type>::cos_calc()
 {
-	return TYPE(std::cos(m_rad_value_));
+	return Type(std::cos(m_rad_value_));
 }
 
 template <typename Type>
 Type trigonometry_calc<Type>::tan_calc()
 {
-	return TYPE(std::tan(m_rad_value_));
+	return Type(std::tan(m_rad_value_));
 }
 
 template <typename Type>
 Type trigonometry_calc<Type>::arcsin_calc()
 {
-	return TYPE(std::asin(m_rad_value_));
+	return Type(std::asin(m_rad_value_));
 }
 
 template <typename Type>
 Type trigonometry_calc<Type>::arccos_calc()
 {
-	return TYPE(std::acos(m_rad_value_));
+	return Type(std::acos(m_rad_value_));
 }
 
 template <typename Type>
 Type trigonometry_calc<Type>::arctan_calc()
 {
-	return TYPE(std::atan(m_rad_value_));
+	return Type(std::atan(m_rad_value_));
 }
 // -----------------------------------
 
