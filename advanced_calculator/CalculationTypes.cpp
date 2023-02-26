@@ -153,48 +153,47 @@ void hyperbolic_output(const int function_choice, const long double angle, trigo
 
 	switch (function_choice)
 	{
-		case 1:
-		{	
-			result = calc.sinh_calc();
-			std::cout << "Sinh(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
-			break;
-		}
-		case 2:
-		{
-			result = calc.cosh_calc();
-			std::cout << "Cosh(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
-			break;
-		}
-		case 3:
-		{
-			result = calc.tanh_calc();
-			std::cout << "Tanh(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
-			break;
-		}
-		case 4:
-		{
-			result = calc.arcsinh_calc();
-			std::cout << "Arcsinh(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
-			break;
-		}
-		case 5:
-		{
-			result = calc.arccosh_calc();
-			std::cout << "Arccosh(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
-			break;
-		}
-		case 6:
-		{
-			result = calc.arctanh_calc();
-			std::cout << "Arctanh(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
-			break;
-		}
-		default:
-		{
-			std::cout << "Input invalidation!\n\n";
-			break;
-		} 
-			
+	case 1:
+	{	
+		result = calc.sinh_calc();
+		std::cout << "Sinh(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
+		break;
+	}
+	case 2:
+	{
+		result = calc.cosh_calc();
+		std::cout << "Cosh(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
+		break;
+	}
+	case 3:
+	{
+		result = calc.tanh_calc();
+		std::cout << "Tanh(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
+		break;
+	}
+	case 4:
+	{
+		result = calc.arcsinh_calc();
+		std::cout << "Arcsinh(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
+		break;
+	}
+	case 5:
+	{
+		result = calc.arccosh_calc();
+		std::cout << "Arccosh(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
+		break;
+	}
+	case 6:
+	{
+		result = calc.arctanh_calc();
+		std::cout << "Arctanh(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
+		break;
+	}
+	default:
+	{
+		std::cout << "Input invalidation!\n\n";
+		break;
+	}
 	}
 }
 
