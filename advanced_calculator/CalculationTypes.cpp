@@ -80,6 +80,8 @@ void arithmetic_calculation()
 
 // *** Explicitly declaring template functions due to file management restrictions ***
 
+// Function used to wrap the value regarding the fact that computer calculations with float values
+// are most of the time not entirely correct
 template <typename Type>
 Type apply_tolerance(Type result, Type tolerance)
 {
@@ -97,51 +99,51 @@ template <typename Type>
 void trig_output(const int function_choice, const long double angle, trigonometry_calc<Type>& calc, Type tolerance)
 {
 	Type result;
-    
-    switch (function_choice)
-    {
-        case 1:
-		{
-			result = calc.sin_calc();
-			std::cout << "Sin(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
-			break;
-		}
-        case 2:
-		{
-			result = calc.cos_calc();
-			std::cout << "Cos(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
-			break;
-		}
-        case 3:
-		{
-			result = calc.tan_calc();
-			std::cout << "Tan(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
-			break;
-		}
-        case 4:
-		{
-			result = calc.arcsin_calc();
-			std::cout << "Arcsin(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
-			break;
-		}
-        case 5:
-		{
-			result = calc.arccos_calc();
-			std::cout << "Arccos(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
-			break;
-		}
-        case 6:
-		{
-			result = calc.arctan_calc();
-			std::cout << "Arctan(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
-			break;
-		}    
-        default:
-		{
-			std::cout << "Input invalidation!\n\n";
-			break;
-		}
-    }
+
+	switch(function_choice)
+	{
+	case 1:
+	{
+		result = calc.sin_calc();
+		std::cout << "Sin(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
+		break;
+	}
+	case 2:
+	{
+		result = calc.cos_calc();
+		std::cout << "Cos(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
+		break;
+	}
+	case 3:
+	{
+		result = calc.tan_calc();
+		std::cout << "Tan(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
+		break;
+	}
+	case 4:
+	{
+		result = calc.arcsin_calc();
+		std::cout << "Arcsin(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
+		break;
+	}
+	case 5:
+	{
+		result = calc.arccos_calc();
+		std::cout << "Arccos(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
+		break;
+	}
+	case 6:
+	{
+		result = calc.arctan_calc();
+		std::cout << "Arctan(" << angle << ") = " << apply_tolerance(result, tolerance) << "\n\n";
+		break;
+	}
+	default:
+	{
+		std::cout << "Input invalidation!\n\n";
+		break;
+	}
+	}
 }
 
 template <typename Type>
