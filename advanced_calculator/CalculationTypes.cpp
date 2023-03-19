@@ -1,58 +1,24 @@
 #include "CalculatorModes.h"
 #include "CalculationTypes.h"
+#include "ArithmeticUtilities.h"
 #include "TrigonometricUtilities.h"
+#include "ExponentialUtilities.h"
 
 #include <iostream>
 
 # define M_PIl 3.141592653589793238462643383279502884L
 
-void arithmetic_calculation() 
+// *** Explicitly declaring template functions due to file management restrictions ***
+
+// Function used to wrap the value regarding the fact that computer calculations with float values
+// are most of the time not entirely correct
+
+template <typename Type>
+void arithmetic_output(const char operation, arithmetic_calc<Type>& calc)
 {
-	arithmetic_calc<long long> calc;
-
-	long long first_value = 0;
-
-	// Entering the first (left operand) value
-	std::cout << "Enter the first value: ";
-	while (!(std::cin >> first_value))
-	{
-		std::cout << "Invalid input. Try again.\n\n";
-		std::cout << "Enter the first value: ";
-		std::cin.clear();  // clear the fail flag
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // discard the invalid input
-	}
-	calc.set_l_value(first_value);
-
-	char arithmetic_operation = '.';
-
-	// Entering the operation type
-	std::cout << "\nEnter the desired operation(+, -, *, /): ";
-	while (!(std::cin >> arithmetic_operation) || 
-		  (arithmetic_operation != '+' && arithmetic_operation != '-' 
-		  && arithmetic_operation != '*' && arithmetic_operation != '/'))
-	{
-		std::cout << "Operation invalidation! Try again.\n";
-		std::cout << "\nEnter the desired operation(+, -, *, /): ";
-		std::cin.clear();  // clear the fail flag
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // discard the invalid input
-	}
-
-	long long second_value = 0;
-
-	// Entering the second value;
-	std::cout << "\nEnter the second value: ";
-	while (!(std::cin >> second_value))
-	{
-		std::cout << "Invalid input. Try again.\n\n";
-		std::cout << "Enter the second value: ";
-		std::cin.clear();  // clear the fail flag
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // discard the invalid input
-	}
-	calc.set_r_value(second_value);
-
 	std::cout << "--------\nOutput result: ";
 
-	switch (arithmetic_operation)
+	switch (operation)
 	{
 	case '+':
 	{
@@ -78,10 +44,6 @@ void arithmetic_calculation()
 	}
 }
 
-// *** Explicitly declaring template functions due to file management restrictions ***
-
-// Function used to wrap the value regarding the fact that computer calculations with float values
-// are most of the time not entirely correct
 template <typename Type>
 Type apply_tolerance(Type result, Type tolerance)
 {
@@ -199,6 +161,25 @@ void hyperbolic_output(const int function_choice, const long double angle, trigo
 
 // ************
 
+void arithmetic_calculation() 
+{
+	arithmetic_calc<long long> calc;
+
+	// Asking user to input and assign the first value
+	const long long first_value = l_value_input();
+	calc.set_l_value(first_value);
+
+	// Asking user for operation type
+	const char arithmetic_operation = op_input();
+
+	// Asking user to input and assign the second value
+	constexpr long long second_value = 0;
+	calc.set_r_value(second_value);
+
+	// Outputting the result of calculation
+	arithmetic_output(arithmetic_operation, calc);
+}
+
 void trigonometry_calculation()
 {
 	// Radians or degrees
@@ -257,6 +238,7 @@ void trigonometry_calculation()
 
 void exponential_calculation()
 {
+
 }
 
 void logarithmic_calculation()

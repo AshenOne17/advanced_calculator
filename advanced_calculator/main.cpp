@@ -5,10 +5,11 @@
 int main()
 {
 	constexpr char continue_decision = 'Y';
-	int choice = 0;
 
 	while (continue_decision == 'Y') 
 	{
+		int choice = 0;
+
 		std::cout << "Welcome to the advanced (scientific) calculator.\n"
 			<< "Types of operations: \n"
 			<< "[1] Arithmetic (+, -, *, /)\n"
@@ -50,7 +51,8 @@ int main()
 		}
 		default: 
 		{
-
+			std::cout << "Error! Try choosing calculator type again!\n\n";
+			break;
 		}
 		}
 	}

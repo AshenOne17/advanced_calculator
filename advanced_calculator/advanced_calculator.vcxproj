@@ -127,13 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ArithmeticUtilities.cpp" />
     <ClCompile Include="CalculationTypes.cpp" />
+    <ClCompile Include="ExponentialUtilities.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TrigonometricUtilities.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ArithmeticUtilities.h" />
     <ClInclude Include="CalculationTypes.h" />
     <ClInclude Include="CalculatorModes.h" />
+    <ClInclude Include="ExponentialUtilities.h" />
     <ClInclude Include="TrigonometricUtilities.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

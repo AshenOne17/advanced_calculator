@@ -6,7 +6,7 @@
 #include <cmath>
 
 // Parent 'Calculator' class declaration
-// -------------------------
+// ---------------------
 template <typename Type>
 class calculator
 {
@@ -19,7 +19,7 @@ public:
 	void set_l_value(Type l_value);
 	void set_r_value(Type r_value);
 };
-// -----------------------------
+// --------------------------------
 
 
 // Parent 'Calculator' class functions definitions
@@ -35,7 +35,7 @@ void  calculator<Type>::set_r_value(Type r_value)
 {
 	m_r_value_ = r_value;
 }
-// -------------------------------------------
+// ----------------------------------------------
 
 
 // Child 'ArithmeticCalc' class declaration
@@ -82,10 +82,11 @@ Type arithmetic_calc<Type>::division()
 {
 	return static_cast<Type>(this->m_l_value_ / this->m_r_value_);
 }
-// ----------------------------------
+// ---------------------------------------------------------------
 
 
 // Child 'TrigonometryCalc' class declaration
+// ---------------------
 template <typename Type>
 class trigonometry_calc : public calculator<Type>
 {
@@ -104,10 +105,11 @@ public:
 	Type arccos_calc();
 	Type arctan_calc();
 };
-// ----------------
+// --------------------
 
 
 // Child 'TrigonometryCalc' class functions definition
+// ---------------------
 template <typename Type>
 void trigonometry_calc<Type>::set_rad(Type deg_value)
 {
@@ -155,10 +157,11 @@ Type trigonometry_calc<Type>::arctan_calc()
 {
 	return Type(std::atan(m_rad_value_));
 }
-// -----------------------------------
+// ----------------------------------------
 
 
 // Child 'TrigonometryHyperbolicCalc' class declaration
+// ---------------------
 template <typename Type>
 class trigonometry_hyperbolic_calc : public trigonometry_calc<Type>
 {
@@ -174,10 +177,11 @@ public:
 	Type arccosh_calc();
 	Type arctanh_calc();
 };
-// ----------------
+// ---------------------
 
 
 // Child 'TrigonometryHyperbolicCalc' class functions definition
+// --------------------
 template<typename Type>
 Type trigonometry_hyperbolic_calc<Type>::sinh_calc()
 {
@@ -213,6 +217,58 @@ Type trigonometry_hyperbolic_calc<Type>::arctanh_calc()
 {
 	return Type(std::atanh(m_rad_value_));
 }
-// --------------------------------
+// ----------------------------------------------------
+
+
+// Child 'ExponentialCalc' class declaration
+// --------------------
+template<typename Type>
+class exponential_calc: public calculator<Type>
+{
+protected:
+	Type m_exponent_ = 0;
+	Type m_base_ = 0;
+	Type m_radicand_ = 0;
+public:
+	exponential_calc() = default;
+
+	void set_exponent(Type exponent);
+
+	void set_base(Type base);
+
+	void set_radicand(Type radicand);
+
+	Type power(Type base, Type exponent);
+};
+// --------------------------------------
+
+
+// Child 'ExponentialCalc' class functions declarations
+// ---------------------
+template <typename Type>
+void exponential_calc<Type>::set_exponent(Type exponent)
+{
+	m_exponent_ = exponent;
+}
+
+template <typename Type>
+void exponential_calc<Type>::set_base(Type base)
+{
+	m_base_ = base;
+}
+
+template <typename Type>
+void exponential_calc<Type>::set_radicand(Type radicand)
+{
+	m_radicand_ = radicand;
+}
+
+template <typename Type>
+Type exponential_calc<Type>::power(Type base, Type exponent)
+{
+	return Type(pow(base, exponent));
+}
+// ---------------------------------------------------------
+
 
 #endif //CALCULATOR_MODES_H

@@ -24,6 +24,12 @@
     <ClCompile Include="TrigonometricUtilities.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="ArithmeticUtilities.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExponentialUtilities.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CalculationTypes.h">
@@ -33,6 +39,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TrigonometricUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArithmeticUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExponentialUtilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
