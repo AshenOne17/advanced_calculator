@@ -1,3 +1,7 @@
-﻿  CalculationTypes.cpp
+﻿  ArithmeticUtilities.cpp
+  CalculationTypes.cpp
+  ExponentialUtilities.cpp
+  main.cpp
+  Generating Code...
   LINK : D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\Debug\advanced_calculator.exe not found or not built by the last incremental link; performing full link
   advanced_calculator.vcxproj -> D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\Debug\advanced_calculator.exe

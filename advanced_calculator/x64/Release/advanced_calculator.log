@@ -1,6 +1,11 @@
-﻿  CalculationTypes.cpp
+﻿  ArithmeticUtilities.cpp
+  CalculationTypes.cpp
+  ExponentialUtilities.cpp
+  main.cpp
   Generating code
-  Previous IPDB and IOBJ mismatch, fall back to full compilation.
-  All 79 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculationTypes.cpp(40): warning C4723: potential divide by 0
+  56 of 109 functions (51.4%) were compiled, the rest were copied from previous compilation.
+    30 functions were new in current compilation
+    7 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   advanced_calculator.vcxproj -> D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\x64\Release\advanced_calculator.exe
