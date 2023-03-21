@@ -6,7 +6,7 @@ int operation_input()
 {
 	int choice = 0;
 
-	std::cout << "Choose the exponential calculation type: \n[1] Power raising\n[2] Square root\n\n";
+	std::cout << "[1] Power raising\n[2] Square root\nChoose the exponential calculation type: ";
 	while (!(std::cin >> choice) || (choice != 1 && choice != 2))
 	{
 		std::cout << "Invalid input. Try again.\n";
@@ -22,32 +22,54 @@ int operation_input()
 	return choice;
 }
 
-double exponent_input()
+double exponent_input(const long double base)
 {
-	double exponent = 0.0;
+    double exponent = 0.0;
 
-	std::cout << "Enter the exponent: ";
-	
-	while (!(std::cin >> exponent))
-	{
-		std::cout << "Invalid input. Try again.\n";
-		std::cout << "\nEnter the exponent: ";
+    std::cout << "Enter the exponent: ";
 
-		// Clear the fail flag
-		std::cin.clear();
+    while (!(std::cin >> exponent))
+    {
+        std::cout << "Invalid input. Try again.\n";
+        std::cout << "\nEnter the exponent: ";
 
-		// Discard the invalid input
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max());
-	}
+        // Clear the fail flag
+        std::cin.clear();
 
-	return exponent;
+        // Discard the invalid input
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max());
+    }
+
+	// Positive base
+    if (base > 0)
+    {
+        return exponent;
+    }
+	// Negative base
+    else if (base < 0) 
+    {
+        if (exponent == 0 || (std::floor(exponent) != exponent && std::abs(std::fmod(exponent, 1)) != 0.5))
+        {
+            throw std::invalid_argument("Invalid exponent input. For a negative base, the exponent must be an integer or a fraction with an odd denominator.");
+        }
+        return exponent;
+    }
+	// Base is zero
+    else 
+    {
+        if (exponent <= 0)
+        {
+            throw std::invalid_argument("Invalid exponent input. For a zero base, the exponent must be positive.");
+        }
+        return exponent;
+    }
 }
 
 long double base_input()
 {
 	long double base = 0.0;
 
-	std::cout << "Enter the base: ";
+	std::cout << "\nEnter the base: ";
 	
 	while (!(std::cin >> base))
 	{

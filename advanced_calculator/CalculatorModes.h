@@ -229,6 +229,7 @@ protected:
 	Type m_exponent_ = 0;
 	Type m_base_ = 0;
 	Type m_radicand_ = 0;
+	Type m_root_exponent_ = 0;
 public:
 	exponential_calc() = default;
 
@@ -238,7 +239,15 @@ public:
 
 	void set_radicand(Type radicand);
 
-	Type power(Type base, Type exponent);
+	void set_root_power(Type root_exponent);
+
+	Type get_exponent();
+
+	Type get_base();
+
+	Type get_radicand();
+
+	Type power();
 };
 // --------------------------------------
 
@@ -264,9 +273,33 @@ void exponential_calc<Type>::set_radicand(Type radicand)
 }
 
 template <typename Type>
-Type exponential_calc<Type>::power(Type base, Type exponent)
+void exponential_calc<Type>::set_root_power(Type root_exponent)
 {
-	return Type(pow(base, exponent));
+	m_root_exponent_ = root_exponent;
+}
+
+template <typename Type>
+Type exponential_calc<Type>::get_base()
+{
+	return m_base_;
+}
+
+template <typename Type>
+Type exponential_calc<Type>::get_exponent()
+{
+	return m_exponent_;
+}
+
+template <typename Type>
+Type exponential_calc<Type>::get_radicand()
+{
+	return m_radicand_;
+}
+
+template <typename Type>
+Type exponential_calc<Type>::power()
+{
+	return Type(pow(m_base_, m_exponent_));
 }
 // ---------------------------------------------------------
 
