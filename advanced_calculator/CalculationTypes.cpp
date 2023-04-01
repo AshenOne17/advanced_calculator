@@ -186,7 +186,7 @@ void arithmetic_calculation()
 	const char arithmetic_operation = op_input();
 
 	// Asking user to input and assign the second value
-	constexpr long long second_value = 0;
+	const long long second_value = r_value_input();
 	calc.set_r_value(second_value);
 
 	// Outputting the result of calculation
