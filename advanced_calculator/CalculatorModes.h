@@ -4,6 +4,7 @@
 #pragma once
 
 #include <cmath>
+#include <algorithm>
 
 // Parent 'Calculator' class declaration
 // ---------------------
@@ -247,7 +248,11 @@ public:
 
 	Type get_radicand();
 
+	Type get_root_power();
+
 	Type power();
+
+	Type root_calculation();
 };
 // --------------------------------------
 
@@ -297,10 +302,51 @@ Type exponential_calc<Type>::get_radicand()
 }
 
 template <typename Type>
+Type exponential_calc<Type>::get_root_power()
+{
+	return m_root_exponent_;
+}
+
+template <typename Type>
 Type exponential_calc<Type>::power()
 {
 	return Type(pow(m_base_, m_exponent_));
 }
+
+template <typename Type>
+Type exponential_calc<Type>::root_calculation()
+{
+	// Set the lower and upper bounds of the interval
+    long double x_low = 0;
+    long double x_high = std::max<Type>(Type(1), m_radicand_);
+
+    // Desired level of accuracy
+	constexpr long double epsilon = 0.00001;
+
+    // Iterate until the difference between upper and lower bounds is less than epsilon
+    while (x_high - x_low > epsilon)
+    {
+        // Calculate the midpoint of the interval
+        long double x_mid = (x_low + x_high) / 2;
+
+        // Calculate the value of the function at the midpoint
+        const long double fx = pow(x_mid, m_root_exponent_) - m_radicand_;
+
+        // Update the interval based on the value of the function at the midpoint
+        if (fx > 0)
+        {
+            x_high = x_mid;
+        }
+        else
+        {
+            x_low = x_mid;
+        }
+    }
+
+    // Return the lower bound of the interval as the calculated root
+    return Type(x_low);
+}
+
 // ---------------------------------------------------------
 
 

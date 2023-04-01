@@ -6,7 +6,7 @@ int operation_input()
 {
 	int choice = 0;
 
-	std::cout << "[1] Power raising\n[2] Square root\nChoose the exponential calculation type: ";
+	std::cout << "[1] Power raising\n[2] Root calculation\nChoose the exponential calculation type: ";
 	std::cin >> choice;
 
 	while (choice != 1 && choice != 2)
@@ -26,7 +26,7 @@ int operation_input()
 	return choice;
 }
 
-double exponent_input(const long double base)
+long int exponent_input(const long double base)
 {
 	/*
 	The exponent must be a real number. This means that it can be a positive number, a negative number, zero, or a fraction.
@@ -64,11 +64,15 @@ double exponent_input(const long double base)
         {
             std::cout << "Invalid input. If the base is zero, the exponent must be positive.\n";
             std::cout << "\nEnter the exponent: ";
+			std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
         else if (base < 0 && (floor(exponent) != exponent || fmod(exponent, 2) == 0.0))
         {
             std::cout << "Invalid input. If the base is negative, the exponent must be an integer or a fraction with an odd denominator.\n";
             std::cout << "\nEnter the exponent: ";
+			std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
         else
         {
@@ -100,22 +104,74 @@ long double base_input()
 	return base;
 }
 
-long double radicand_input()
+long int root_power_input()
+{
+	long int root_exponent = 0.0;
+
+	std::cout << "\nEnter the root power: ";
+
+	while (true)
+	{
+		if (!(std::cin >> root_exponent))
+		{
+			std::cout << "Invalid input. Try again.\n";
+			std::cout << "Enter the root power: ";
+			std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+		else if (root_exponent == 0.0)
+		{
+			std::cout << "\nError. Root exponent can't be 0.\n\n";
+			std::cout << "Enter the root power: ";
+			std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+		else
+		{
+			break;
+		}
+	}
+
+	return root_exponent;
+}
+
+long double radicand_input(const long int root_power)
 {
 	long double radicand = 0.0;
 
 	std::cout << "Enter the radicand (number under square root): ";
-	
-	while (!(std::cin >> radicand) || radicand < 0)
+
+	while (true)
 	{
-		std::cout << "Invalid input. Try again.\n";
-		std::cout << "\nEnter the radicand (number under square root): ";
+		if (!(std::cin >> radicand))
+		{
+			std::cout << "Invalid input. Try again.\n";
+			std::cout << "\nEnter the radicand (number under square root): ";
 
-		// Clear the fail flag
-		std::cin.clear();
+			// Clear the fail flag
+			std::cin.clear();
 
-		// Discard the invalid input
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			// Discard the invalid input
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+		else if (radicand < 0)
+		{
+			std::cout << "\nError. Radicand can't be lower than 0. Try again.\n\n";
+			std::cout << "Enter the radicand (number under square root): ";
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+		else if (root_power % 2 == 0 && radicand < 0)
+		{
+			std::cout << "\nError: a must be non-negative if n is even. Try again.\n\n";
+			std::cout << "Enter the radicand (number under square root): ";
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
+		else
+		{
+			break;
+		}
 	}
 
 	return radicand;

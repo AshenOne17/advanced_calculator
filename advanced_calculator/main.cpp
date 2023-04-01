@@ -1,6 +1,5 @@
 #include "CalculationTypes.h"
 #include <iostream>
-#include <cstdlib>
 
 int main()
 {
@@ -21,7 +20,7 @@ int main()
 
 		std::cin >> choice;
 
-		system("cls");
+		std::cout << "\033[2J\033[1;1H";
 
 		switch (choice) 
 		{
@@ -47,7 +46,7 @@ int main()
 		}
 		case 0: 
 		{
-			exit(1);
+			return 0;
 		}
 		default: 
 		{

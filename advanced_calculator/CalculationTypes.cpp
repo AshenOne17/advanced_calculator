@@ -160,11 +160,16 @@ void hyperbolic_output(const int function_choice, const long double angle, trigo
 }
 
 template <typename Type>
-void exponential_output(exponential_calc<Type>& calc)
+void exponential_output(exponential_calc<Type>& calc, int choice)
 {
-	auto result = calc.power();
-
-	std::cout << "Number " << calc.get_base() << " raised to power of " << calc.get_exponent() << " equals to " << calc.power() << "\n\n";
+	if (choice == 1)
+	{
+		std::cout << "Number " << calc.get_base() << " raised to power of " << calc.get_exponent() << " equals to " << calc.power() << "\n\n";
+	}
+	else
+	{
+		std::cout << "Root of power " << calc.get_root_power() << " of the radicand " << calc.get_radicand() << " equals to " << calc.root_calculation() << "\n\n";
+	}
 }
 
 // ************
@@ -244,28 +249,44 @@ void trigonometry_calculation()
 	}
 }
 
-
-
-
 void exponential_calculation()
 {
 	const int choice = operation_input();
 
+	exponential_calc<long double> calc;
+
+	// If we want to calculate power raising
 	if (choice == 1)
 	{
-		exponential_calc<long double> calc;
-
 		const long double base = base_input();
 		calc.set_base(base);
 
 		const double exponent = exponent_input(base);
 		calc.set_exponent(exponent);
 
-		exponential_output(calc);
+		exponential_output(calc, choice);
 	}
+	// If we want to calculate square root (of different powers)
 	else if (choice == 2)
 	{
-		// To Do.
+		// Newton - Raphson method (alt. called or also known as Newton method) is used to calculate the root;
+		//
+		// The Newton-Raphson method (also known as Newton's method) is a way to quickly find a good approximation
+		// for the root of a real-valued function f(x) = 0. It uses the idea that a continuous and differentiable function
+		// can be approximated by a straight line tangent to it.
+		// Suppose you need to find the root of a continuous, differentiable function f(x), and you know the root
+		// you are looking for is near the point x = x0. Then Newton's method tells us that a better approximation for the root is
+		// x1 = x0 - ( f(x) / f'(x0) );
+		// This process may be repeated as many times as necessary to get the desired accuracy. In general, for any x-value xn, the next value is given by:
+		// xn+1 = xn - ( f(xn) / f'(xn) );
+
+		const long int root_power = root_power_input();
+		calc.set_root_power(root_power);
+
+		const long double radicand = radicand_input(root_power);
+		calc.set_radicand(radicand);
+
+		exponential_output(calc, choice);
 	}
 }
 
