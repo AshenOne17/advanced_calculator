@@ -1,1 +1,2 @@
 D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\x64\Debug\advanced_calculator.exe
+D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\x64\Debug\advanced_calculator.exe

@@ -1,11 +1,15 @@
 ﻿  ArithmeticUtilities.cpp
   CalculationTypes.cpp
   ExponentialUtilities.cpp
+D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\ExponentialUtilities.cpp(63,45): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
+D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\ExponentialUtilities.cpp(83,12): warning C4244: 'return': conversion from 'double' to 'long', possible loss of data
+D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\ExponentialUtilities.cpp(109,25): warning C4244: 'initializing': conversion from 'double' to 'long', possible loss of data
   main.cpp
+  TrigonometricUtilities.cpp
   Generating code
-D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\CalculationTypes.cpp(40): warning C4723: potential divide by 0
-  56 of 109 functions (51.4%) were compiled, the rest were copied from previous compilation.
-    30 functions were new in current compilation
-    7 functions had inline decision re-evaluated but remain unchanged
+D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\CalculationTypes.cpp(40): warning C4723: potential divide by 0
+  101 of 103 functions (98.1%) were compiled, the rest were copied from previous compilation.
+    10 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  advanced_calculator.vcxproj -> D:\Programming\Pet Projects\advanced_calculator\advanced_calculator\x64\Release\advanced_calculator.exe
+  advanced_calculator.vcxproj -> D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\x64\Release\advanced_calculator.exe
