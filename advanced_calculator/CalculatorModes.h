@@ -109,7 +109,7 @@ public:
 // --------------------
 
 
-// Child 'TrigonometryCalc' class functions definition
+// Child 'TrigonometryCalc' class functions definitions
 // ---------------------
 template <typename Type>
 void trigonometry_calc<Type>::set_rad(Type deg_value)
@@ -181,7 +181,7 @@ public:
 // ---------------------
 
 
-// Child 'TrigonometryHyperbolicCalc' class functions definition
+// Child 'TrigonometryHyperbolicCalc' class functions definitions
 // --------------------
 template<typename Type>
 Type trigonometry_hyperbolic_calc<Type>::sinh_calc()
@@ -257,7 +257,7 @@ public:
 // --------------------------------------
 
 
-// Child 'ExponentialCalc' class functions declarations
+// Child 'ExponentialCalc' class functions definitions
 // ---------------------
 template <typename Type>
 void exponential_calc<Type>::set_exponent(Type exponent)
@@ -349,5 +349,40 @@ Type exponential_calc<Type>::root_calculation()
 
 // ---------------------------------------------------------
 
+
+// Child 'LogarithmicCalc' class declaration
+// -------------------------
+template <typename Type>
+class logarithmic_calc : public calculator<Type>
+{
+protected:
+	Type m_log_base_ = 0;
+	Type m_log_number_ = 0;
+public:
+	logarithmic_calc() = default;
+
+	void set_log_base(Type base);
+
+	void set_log_number(Type number);
+
+	Type log_calculation();
+};
+// -----------------------
+
+
+// Child 'LogarithmicCalc' class functions definitions
+// ------------------
+template <typename Type>
+void logarithmic_calc<Type>::set_log_base(Type base)
+{
+	m_log_base_ = base;
+}
+
+template <typename Type>
+void logarithmic_calc<Type>::set_log_number(Type number)
+{
+	m_log_number_ = number;
+}
+// -----------------------------------------------------
 
 #endif //CALCULATOR_MODES_H
