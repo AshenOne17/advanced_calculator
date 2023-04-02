@@ -30,7 +30,7 @@ long int log_base_input()
 {
 	long int log_base = 0;
 
-	std::cout << "Enter the logarithm base (positive number except for 1 and 0): ";
+	std::cout << "\nEnter the logarithm base (positive number except for 1 and 0): ";
 
 	while (true)
 	{
@@ -41,9 +41,9 @@ long int log_base_input()
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
-		else if (log_base < 2)
+		else if (log_base <= 0 || log_base == 1)
 		{
-			std::cout << "Error. Logarithm base can't be lower than 2. Try again.\n";
+			std::cout << "Error. Logarithm base can't be lower or equal to 0 or equal to 1. Try again.\n";
 			std::cout << "\nEnter the logarithm base (positive number except for 1): ";
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -57,25 +57,24 @@ long int log_base_input()
 	return log_base;
 }
 
-long int log_number_input()
+long double log_number_input()
 {
-	long int log_number = 0;
+	long double log_number = 0;
 
-	std::cout << "Enter the logarithm number (positive number except for 0): ";
-	std::cin >> log_number;
+	std::cout << "\nEnter the logarithm number (positive number except for 0): ";
 
 	while (true)
 	{
 		if (!(std::cin >> log_number))
 		{
 			std::cout << "Invalid input. Try again.\n";
-            std::cout << "\nEnter the logarithm base (positive number except for 1): ";
+            std::cout << "\nEnter the logarithm number (positive number except for 1): ";
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
-		else if (log_number < 1)
+		else if (log_number <= 0)
 		{
-			std::cout << "Error. Logarithm number can't be lower than 1. Try again.\n";
+			std::cout << "Error. Logarithm number can't be lower or equal to 0. Try again.\n";
             std::cout << "\nEnter the logarithm base (positive number except for 1): ";
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');

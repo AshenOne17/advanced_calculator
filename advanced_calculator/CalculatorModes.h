@@ -365,6 +365,10 @@ public:
 
 	void set_log_number(Type number);
 
+	Type get_log_base();
+
+	Type get_log_number();
+
 	Type log_calculation();
 };
 // -----------------------
@@ -382,6 +386,31 @@ template <typename Type>
 void logarithmic_calc<Type>::set_log_number(Type number)
 {
 	m_log_number_ = number;
+}
+
+template <typename Type>
+Type logarithmic_calc<Type>::get_log_base()
+{
+	return m_log_base_;
+}
+
+template <typename Type>
+Type logarithmic_calc<Type>::get_log_number()
+{
+	return m_log_number_;
+}
+
+template <typename Type>
+Type logarithmic_calc<Type>::log_calculation()
+{
+	// Since <cmath> library provides only natural, common and base 2 logarithms,
+	// we must provide a formula to calculate log of any base:
+	//
+	// logb(x) = loga(x)/loga(b)
+	// In other words, the logarithm of x with base b can be calculated as the logarithm of x with any other base a
+	// (such as the natural or common logarithm), divided by the logarithm of b with the same base a.
+
+	return Type(log(m_log_number_) / log(m_log_base_));
 }
 // -----------------------------------------------------
 

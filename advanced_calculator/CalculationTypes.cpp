@@ -178,7 +178,7 @@ void logarithmic_output(logarithmic_calc<Type>& calc, const int choice)
 {
 	if (choice == 1)
 	{
-		// To Do.
+		std::cout << "\nLogarithm of " << calc.get_log_number() << " to the base " << calc.get_log_base() << " is equal to " << calc.log_calculation() << ".\n\n";
 	}
 	else
 	{
@@ -312,13 +312,13 @@ void logarithmic_calculation()
 
 	if (choice == 1)
 	{
-		const int base = log_base_input();
+		const long int base = log_base_input();
 		calc.set_log_base(base);
 
-		const int number = log_number_input();
+		const long double number = log_number_input();
 		calc.set_log_number(number);
 
-		// To Do.
+		logarithmic_output(calc, choice);
 	}
 	else
 	{
