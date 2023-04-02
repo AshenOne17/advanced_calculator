@@ -3,6 +3,7 @@
 #include "ArithmeticUtilities.h"
 #include "TrigonometricUtilities.h"
 #include "ExponentialUtilities.h"
+#include "LogarithmicUtilities.h"
 
 #include <iostream>
 
@@ -160,7 +161,7 @@ void hyperbolic_output(const int function_choice, const long double angle, trigo
 }
 
 template <typename Type>
-void exponential_output(exponential_calc<Type>& calc, int choice)
+void exponential_output(exponential_calc<Type>& calc, const int choice)
 {
 	if (choice == 1)
 	{
@@ -169,6 +170,19 @@ void exponential_output(exponential_calc<Type>& calc, int choice)
 	else
 	{
 		std::cout << "Root of power " << calc.get_root_power() << " of the radicand " << calc.get_radicand() << " equals to " << calc.root_calculation() << "\n\n";
+	}
+}
+
+template <typename Type>
+void logarithmic_output(logarithmic_calc<Type>& calc, const int choice)
+{
+	if (choice == 1)
+	{
+		// To Do.
+	}
+	else
+	{
+		// To Do.
 	}
 }
 
@@ -292,5 +306,22 @@ void exponential_calculation()
 
 void logarithmic_calculation()
 {
-	// To Do.
+	const int choice = log_calculation_type_input();
+
+	logarithmic_calc<long double> calc;
+
+	if (choice == 1)
+	{
+		const int base = log_base_input();
+		calc.set_log_base(base);
+
+		const int number = log_number_input();
+		calc.set_log_number(number);
+
+		// To Do.
+	}
+	else
+	{
+		// To Do.
+	}
 }

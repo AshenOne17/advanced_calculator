@@ -30,6 +30,9 @@
     <ClCompile Include="ExponentialUtilities.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="LogarithmicUtilities.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CalculationTypes.h">
@@ -45,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ExponentialUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LogarithmicUtilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

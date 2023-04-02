@@ -131,6 +131,7 @@
     <ClCompile Include="ArithmeticUtilities.cpp" />
     <ClCompile Include="CalculationTypes.cpp" />
     <ClCompile Include="ExponentialUtilities.cpp" />
+    <ClCompile Include="LogarithmicUtilities.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TrigonometricUtilities.cpp" />
   </ItemGroup>
@@ -139,6 +140,7 @@
     <ClInclude Include="CalculationTypes.h" />
     <ClInclude Include="CalculatorModes.h" />
     <ClInclude Include="ExponentialUtilities.h" />
+    <ClInclude Include="LogarithmicUtilities.h" />
     <ClInclude Include="TrigonometricUtilities.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
