@@ -1,8 +1,8 @@
 ﻿  CalculationTypes.cpp
   LogarithmicUtilities.cpp
   Generating code
-  16 of 116 functions (13.8%) were compiled, the rest were copied from previous compilation.
-    12 functions were new in current compilation
-    19 functions had inline decision re-evaluated but remain unchanged
+  18 of 125 functions (14.4%) were compiled, the rest were copied from previous compilation.
+    9 functions were new in current compilation
+    26 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   advanced_calculator.vcxproj -> D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\x64\Release\advanced_calculator.exe
