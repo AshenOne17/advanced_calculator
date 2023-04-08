@@ -182,7 +182,7 @@ void logarithmic_output(logarithmic_calc<Type>& calc, const int choice)
 	}
 	else
 	{
-		// To Do.
+		std::cout << '\n' << calc.get_exp_base() << " to the power of " << calc.get_exp_exponent() << " is equal to " << calc.exp_calculation() << ".\n\n";
 	}
 }
 
@@ -322,6 +322,12 @@ void logarithmic_calculation()
 	}
 	else
 	{
-		// To Do.
+		const long double exponent = exp_exponent_input();
+		calc.set_exp_exponent(exponent);
+
+		const long double base = exp_base_input(exponent);
+		calc.set_exp_base(base);
+		
+		logarithmic_output(calc, choice);
 	}
 }

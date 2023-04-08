@@ -1,0 +1,101 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6281",
+          "message": {
+            "text": "Incorrect order of operations."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Programming/GitHub/Pet Projects/advanced_calculator/advanced_calculator/ExponentialUtilities.cpp"
+                },
+                "region": {
+                  "startLine": 63,
+                  "startColumn": 32,
+                  "endLine": 63,
+                  "endColumn": 41
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "exponent_input",
+                  "decoratedName": "?exponent_input@@YAJO@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6281",
+          "message": {
+            "text": "Incorrect order of operations."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Programming/GitHub/Pet Projects/advanced_calculator/advanced_calculator/ExponentialUtilities.cpp"
+                },
+                "region": {
+                  "startLine": 63,
+                  "startColumn": 18,
+                  "endLine": 63,
+                  "endColumn": 26
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "exponent_input",
+                  "decoratedName": "?exponent_input@@YAJO@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.34.31937.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///D:/Programming/GitHub/Pet Projects/advanced_calculator/advanced_calculator/ExponentialUtilities.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "b7e7f822484c8d9a40c0e9767298a8b19279c54ee430a38a9fd098777365452f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/programming/github/pet projects/advanced_calculator/advanced_calculator/exponentialutilities.h"
+          },
+          "hashes": {
+            "sha-256": "20dc542d018dd831ecf06c446e96fde35ad744762df2afb59561b4e2b0aff48c"
+          }
+        }
+      ]
+    }
+  ]
+}

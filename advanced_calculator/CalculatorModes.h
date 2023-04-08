@@ -358,6 +358,8 @@ class logarithmic_calc : public calculator<Type>
 protected:
 	Type m_log_base_ = 0;
 	Type m_log_number_ = 0;
+	Type m_exp_base_ = 0;
+	Type m_exp_exponent_ = 0;
 public:
 	logarithmic_calc() = default;
 
@@ -365,11 +367,21 @@ public:
 
 	void set_log_number(Type number);
 
+	void set_exp_base(Type base);
+
+	void set_exp_exponent(Type exponent);
+
 	Type get_log_base();
 
 	Type get_log_number();
 
 	Type log_calculation();
+
+	Type get_exp_base();
+
+	Type get_exp_exponent();
+
+	Type exp_calculation();
 };
 // -----------------------
 
@@ -386,6 +398,18 @@ template <typename Type>
 void logarithmic_calc<Type>::set_log_number(Type number)
 {
 	m_log_number_ = number;
+}
+
+template <typename Type>
+void logarithmic_calc<Type>::set_exp_base(Type base)
+{
+	m_exp_base_ = base;
+}
+
+template <typename Type>
+void logarithmic_calc<Type>::set_exp_exponent(Type exponent)
+{
+	m_exp_exponent_ = exponent;
 }
 
 template <typename Type>
@@ -412,6 +436,25 @@ Type logarithmic_calc<Type>::log_calculation()
 
 	return Type(log(m_log_number_) / log(m_log_base_));
 }
+
+template <typename Type>
+Type logarithmic_calc<Type>::get_exp_base()
+{
+	return m_exp_base_;
+}
+
+template <typename Type>
+Type logarithmic_calc<Type>::get_exp_exponent()
+{
+	return m_exp_exponent_;
+}
+
+template <typename Type>
+Type logarithmic_calc<Type>::exp_calculation()
+{
+	return Type(pow(m_exp_base_, m_exp_exponent_));
+}
+
 // -----------------------------------------------------
 
 #endif //CALCULATOR_MODES_H

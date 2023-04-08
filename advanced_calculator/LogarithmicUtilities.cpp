@@ -88,4 +88,63 @@ long double log_number_input()
 	return log_number;
 }
 
-// To Do.
+long double exp_base_input(const long double exponent)
+{
+    long double base = 0;
+
+    std::cout << "\n(If the exponent is 0, base can be any non-zero number.)\n"
+              "Enter the base for exponential function (positive number): ";
+
+    while (true)
+    {
+        if (!(std::cin >> base))
+        {
+            std::cout << "Invalid input. Try again.\n";
+            std::cout << "\nEnter the base for exponential function: ";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+        else if (base <= 0)
+        {
+            if (exponent >= 0.0 && base == 0.0)
+            {
+                std::cout << "Invalid input. Base can't be zero when the exponent is positive. Try again.\n";
+            }
+            else if (exponent != std::floor(exponent) && base < 0)
+            {
+                std::cout << "Invalid input. Raising a negative number to a non-integer exponent results in a complex number. Try again.\n";
+            }
+            else
+            {
+                std::cout << "Invalid input. Base should be a positive number. Try again.\n";
+            }
+
+            std::cout << "\nEnter the base for exponential function: ";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    return base;
+}
+
+long double exp_exponent_input()
+{
+	long double exponent = 0;
+
+	std::cout << "\nEnter the exponent for exponential function: ";
+
+	while (!(std::cin >> exponent))
+	{
+		std::cout << "Invalid input. Try again.\n";
+		std::cout << "\nEnter the exponent for exponential function: ";
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	}
+
+	return exponent;
+}

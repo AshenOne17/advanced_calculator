@@ -20,29 +20,61 @@
       "artifacts": [
         {
           "location": {
-            "uri": "file:///d:/programming/pet projects/advanced_calculator/advanced_calculator/calculationtypes.cpp"
+            "uri": "file:///d:/programming/github/pet projects/advanced_calculator/advanced_calculator/calculationtypes.cpp"
           },
           "roles": [
             "analysisTarget"
           ],
           "hashes": {
-            "sha-256": "aed868901e777fab373f168be72cbf99c190d160aa883d12635d1b164c9d768f"
+            "sha-256": "cd87eafb56555293466a50bc87fe78472be91c72ef5a6dcf4af6eaa1acf787ba"
           }
         },
         {
           "location": {
-            "uri": "file:///d:/programming/pet projects/advanced_calculator/advanced_calculator/calculatormodes.h"
+            "uri": "file:///d:/programming/github/pet projects/advanced_calculator/advanced_calculator/calculatormodes.h"
           },
           "hashes": {
-            "sha-256": "adc2f8d720f5b3024dc768abf812fdda6ac90d600db8fa3c548a78f896db438f"
+            "sha-256": "433a379db42e9e6145d3010ba54653f81f29666f8a5facd83508720ffd4f54b3"
           }
         },
         {
           "location": {
-            "uri": "file:///d:/programming/pet projects/advanced_calculator/advanced_calculator/calculationtypes.h"
+            "uri": "file:///d:/programming/github/pet projects/advanced_calculator/advanced_calculator/calculationtypes.h"
           },
           "hashes": {
-            "sha-256": "15f8d3ebaa39926547bf07f67394331d85ac999e9a3c8095a94f30deca7d6c3a"
+            "sha-256": "e8331dc92fc9666bc54134ec9e256651adc9e2502b211bf6b2765b98c60fc49a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/programming/github/pet projects/advanced_calculator/advanced_calculator/arithmeticutilities.h"
+          },
+          "hashes": {
+            "sha-256": "a31fcaa7b44077fe22917ce007018c4cd41ea9cc5ffa9ad76f6703395d351803"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/programming/github/pet projects/advanced_calculator/advanced_calculator/trigonometricutilities.h"
+          },
+          "hashes": {
+            "sha-256": "9a2749e1622f76845f2048b066d123b5ece235200e97979546c1dad9950384ce"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/programming/github/pet projects/advanced_calculator/advanced_calculator/exponentialutilities.h"
+          },
+          "hashes": {
+            "sha-256": "20dc542d018dd831ecf06c446e96fde35ad744762df2afb59561b4e2b0aff48c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/programming/github/pet projects/advanced_calculator/advanced_calculator/logarithmicutilities.h"
+          },
+          "hashes": {
+            "sha-256": "4d9fac488d5849db00a2da39c8c469c68126d8b007257cb059b0428364bb1c88"
           }
         }
       ]

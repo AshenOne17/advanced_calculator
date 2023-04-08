@@ -20,29 +20,21 @@
       "artifacts": [
         {
           "location": {
-            "uri": "file:///d:/programming/pet projects/advanced_calculator/advanced_calculator/main.cpp"
+            "uri": "file:///d:/programming/github/pet projects/advanced_calculator/advanced_calculator/main.cpp"
           },
           "roles": [
             "analysisTarget"
           ],
           "hashes": {
-            "sha-256": "da8b316b3792cba6827cc42ea428ecfc2e2e6af653dd91ddc9a02cd3ed7681b6"
+            "sha-256": "97ac6f37b6863486e189bfe125002e42341de0e400dfd3af376151e593c5aa88"
           }
         },
         {
           "location": {
-            "uri": "file:///d:/programming/pet projects/advanced_calculator/advanced_calculator/calculatormodes.h"
+            "uri": "file:///d:/programming/github/pet projects/advanced_calculator/advanced_calculator/calculationtypes.h"
           },
           "hashes": {
-            "sha-256": "adc2f8d720f5b3024dc768abf812fdda6ac90d600db8fa3c548a78f896db438f"
-          }
-        },
-        {
-          "location": {
-            "uri": "file:///d:/programming/pet projects/advanced_calculator/advanced_calculator/calculationtypes.h"
-          },
-          "hashes": {
-            "sha-256": "15f8d3ebaa39926547bf07f67394331d85ac999e9a3c8095a94f30deca7d6c3a"
+            "sha-256": "e8331dc92fc9666bc54134ec9e256651adc9e2502b211bf6b2765b98c60fc49a"
           }
         }
       ]

@@ -1,0 +1,43 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.34.31937.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///d:/programming/github/pet projects/advanced_calculator/advanced_calculator/arithmeticutilities.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "e77e49ba6c26429e1621a76bbae29bb080a1c3fa202f3cc45a936e00ab9f7351"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/programming/github/pet projects/advanced_calculator/advanced_calculator/arithmeticutilities.h"
+          },
+          "hashes": {
+            "sha-256": "a31fcaa7b44077fe22917ce007018c4cd41ea9cc5ffa9ad76f6703395d351803"
+          }
+        }
+      ]
+    }
+  ]
+}
