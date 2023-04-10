@@ -15,42 +15,42 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="Source Files\ArithmeticUtilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CalculationTypes.cpp">
+    <ClCompile Include="Source Files\CalculationTypes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TrigonometricUtilities.cpp">
-      <Filter>Header Files</Filter>
+    <ClCompile Include="Source Files\ExponentialUtilities.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ArithmeticUtilities.cpp">
-      <Filter>Header Files</Filter>
+    <ClCompile Include="Source Files\LogarithmicUtilities.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ExponentialUtilities.cpp">
-      <Filter>Header Files</Filter>
+    <ClCompile Include="Source Files\main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LogarithmicUtilities.cpp">
-      <Filter>Header Files</Filter>
+    <ClCompile Include="Source Files\TrigonometricUtilities.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CalculationTypes.h">
+    <ClInclude Include="Header Files\ArithmeticUtilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CalculatorModes.h">
+    <ClInclude Include="Header Files\CalculationTypes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TrigonometricUtilities.h">
+    <ClInclude Include="Header Files\CalculatorModes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ArithmeticUtilities.h">
+    <ClInclude Include="Header Files\ExponentialUtilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ExponentialUtilities.h">
+    <ClInclude Include="Header Files\LogarithmicUtilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LogarithmicUtilities.h">
+    <ClInclude Include="Header Files\TrigonometricUtilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
