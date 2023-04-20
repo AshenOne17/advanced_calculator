@@ -1,4 +1,11 @@
-﻿  CalculationTypes.cpp
+﻿  ArithmeticUtilities.cpp
+  CalculationTypes.cpp
+  ExponentialUtilities.cpp
+D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\Source Files\ExponentialUtilities.cpp(51,23): warning C4244: 'initializing': conversion from 'double' to 'long', possible loss of data
+D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\Source Files\ExponentialUtilities.cpp(64,45): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
+D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\Source Files\ExponentialUtilities.cpp(106,25): warning C4244: 'initializing': conversion from 'double' to 'long', possible loss of data
   LogarithmicUtilities.cpp
+  main.cpp
+  TrigonometricUtilities.cpp
   Generating Code...
   advanced_calculator.vcxproj -> D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\Debug\advanced_calculator.exe
