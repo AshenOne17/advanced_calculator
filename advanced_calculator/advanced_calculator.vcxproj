@@ -19,20 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source Files\ArithmeticUtilities.cpp" />
-    <ClCompile Include="Source Files\CalculationTypes.cpp" />
-    <ClCompile Include="Source Files\ExponentialUtilities.cpp" />
-    <ClCompile Include="Source Files\LogarithmicUtilities.cpp" />
-    <ClCompile Include="Source Files\main.cpp" />
-    <ClCompile Include="Source Files\TrigonometricUtilities.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Header Files\ArithmeticUtilities.h" />
     <ClInclude Include="Header Files\CalculationTypes.h" />
     <ClInclude Include="Header Files\CalculatorModes.h" />
     <ClInclude Include="Header Files\ExponentialUtilities.h" />
     <ClInclude Include="Header Files\LogarithmicUtilities.h" />
     <ClInclude Include="Header Files\TrigonometricUtilities.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source Files\ArithmeticUtilities.cpp" />
+    <ClCompile Include="Source Files\CalculationTypes.cpp" />
+    <ClCompile Include="Source Files\ExponentialUtilities.cpp" />
+    <ClCompile Include="Source Files\LogarithmicUtilities.cpp" />
+    <ClCompile Include="Source Files\main.cpp" />
+    <ClCompile Include="Source Files\TrigonometricUtilities.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -87,7 +87,16 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\Header Files;$(IncludePath)</IncludePath>
+    <IncludePath>D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\Header Files;D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\Header Files;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\Header Files;D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\Header Files;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\Header Files;D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\Header Files;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\Programming\GitHub\Pet Projects\advanced_calculator\advanced_calculator\Header Files;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
